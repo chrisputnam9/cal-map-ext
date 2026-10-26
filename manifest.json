@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Google Calendar Maps in New Tab",
+  "version": "1.1.0",
+  "description": "Prevents Google Calendar from opening the Google Maps side panel and opens event locations in a new tab instead.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Google Calendar Maps in New Tab"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
